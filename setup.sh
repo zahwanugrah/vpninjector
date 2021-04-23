@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/sodosok.sh && c
 #installwg
 wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget http://prem.vpnstores.net/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
 wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
