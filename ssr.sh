@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/Nataslamet/TesScript/main/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/zahwanugrah/main/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -138,9 +138,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://raw.githubusercontent.com/Nataslamet/TesScript/main/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/Nataslamet/TesScript/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/Nataslamet/TesScript/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/Nataslamet/TesScript/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/zahwanugrah/main/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/zahwanugrah/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/zahwanugrah/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/zahwanugrah/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
