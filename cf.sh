@@ -5,10 +5,10 @@ NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
 apt install jq curl -y
-DOMAIN=sg.nataserver.my.id
+DOMAIN=premi.v2ray.vpninjector.com
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.sg.nataserver.my.id
-CF_ID=nataslametsuberkah@gmail.com
+SUB_DOMAIN=${sub}.premi.v2ray.vpninjector.com
+CF_ID=kopetmania@gmail.com
 CF_KEY=d7646d2edd8f564e0da635c6b8b71c5fba0e2
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
