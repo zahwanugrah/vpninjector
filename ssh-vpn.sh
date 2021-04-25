@@ -15,13 +15,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.vpnstores.net
-organizationalunit=www.vpnstores.net
-commonname=www.vpnstores.net
-email=admin@vpnstores.net
+organization=jawa-tengah
+organizationalunit=vpninjector.com
+commonname=www.vpninjector.com
+email=admin@vpninjector.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Nataslamet/TesScript/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/zahwanugrah/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -72,8 +72,8 @@ apt-get remove --purge exim4 -y
 # install wget and curl
 apt -y install wget curl
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+# set time GMT +8
+ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -88,14 +88,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Nataslamet/TesScript/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/zahwanugrah/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Nataslamet/TesScript/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/zahwanugrah/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Nataslamet/TesScript/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/zahwanugrah/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -116,8 +116,8 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 777"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -125,7 +125,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Nataslamet/TesScript/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/zahwanugrah/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -154,16 +154,8 @@ socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
-[dropbear]
-accept = 443
-connect = 127.0.0.1:109
-
-[dropbear]
-accept = 777
-connect = 127.0.0.1:22
-
 [openvpn]
-accept = 442
+accept = 443
 connect = 127.0.0.1:1194
 
 END
@@ -179,7 +171,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/zahwanugrah/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -234,36 +226,36 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Nataslamet/TesScript/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Nataslamet/TesScript/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com//Nataslamet/TesScript/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Nataslamet/TesScript/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Nataslamet/TesScript/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Nataslamet/TesScript/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Nataslamet/TesScript/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Nataslamet/TesScript/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Nataslamet/TesScript/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Nataslamet/TesScript/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Nataslamet/TesScript/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Nataslamet/TesScript/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Nataslamet/TesScript/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Nataslamet/TesScript/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Nataslamet/TesScript/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Nataslamet/TesScript/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Nataslamet/TesScript/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Nataslamet/TesScript/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Nataslamet/TesScript/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Nataslamet/TesScript/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Nataslamet/TesScript/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Nataslamet/TesScript/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/Nataslamet/TesScript/main/kernel-update.sh"
+wget -O add-host "https://raw.githubusercontent.com/zahwanugrah/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/zahwanugrah/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/zahwanugrah/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/zahwanugrah/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/zahwanugrah/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/zahwanugrah/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/zahwanugrah/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/zahwanugrah/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/zahwanugrah/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/zahwanugrah/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/zahwanugrah/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/zahwanugrah/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/zahwanugrah/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/zahwanugrah/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/zahwanugrah/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/zahwanugrah/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/zahwanugrah/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/zahwanugrah/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/zahwanugrah/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/zahwanugrah/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/zahwanugrah/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/zahwanugrah/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/zahwanugrah/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/zahwanugrah/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/zahwanugrah/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/zahwanugrah/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/zahwanugrah/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/zahwanugrah/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/zahwanugrah/main/xp.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/zahwanugrah/main/kernel-update.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
