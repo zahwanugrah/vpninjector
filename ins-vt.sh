@@ -8,7 +8,7 @@ apt -y install chrony
 timedatectl set-ntp true
 systemctl enable chronyd && systemctl restart chronyd
 systemctl enable chrony && systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Kuala_Lumpur
 chronyc sourcestats -v
 chronyc tracking -v
 date
@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/Nataslamet/TesScript/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/zahwanugrah/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -58,7 +58,7 @@ cat> /etc/v2ray/config.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/zhangzi",
           "headers": {
             "Host": ""
           }
@@ -146,7 +146,7 @@ cat> /etc/v2ray/none.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/zhangzi",
           "headers": {
             "Host": ""
           }
@@ -220,7 +220,7 @@ cat> /etc/v2ray/vless.json << END
   },
   "inbounds": [
     {
-      "port": 2083,
+      "port": 2443,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -243,7 +243,7 @@ cat> /etc/v2ray/vless.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/zhangzi",
           "headers": {
             "Host": ""
           }
@@ -316,7 +316,7 @@ cat> /etc/v2ray/vnone.json << END
   },
   "inbounds": [
     {
-      "port": 8880,
+      "port": 86,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -330,7 +330,7 @@ cat> /etc/v2ray/vnone.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/zhangzi",
           "headers": {
             "Host": ""
           }
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/Nataslamet/TesScript/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/Nataslamet/TesScript/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/Nataslamet/TesScript/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/Nataslamet/TesScript/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/Nataslamet/TesScript/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/Nataslamet/TesScript/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/Nataslamet/TesScript/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/Nataslamet/TesScript/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/Nataslamet/TesScript/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/Nataslamet/TesScript/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/Nataslamet/TesScript/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/Nataslamet/TesScript/main/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/Nataslamet/TesScript/main/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/zahwanugrah/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/zahwanugrah/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/zahwanugrah/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/zahwanugrah/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/zahwanugrah/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/zahwanugrah/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/zahwanugrah/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/zahwanugrah/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/zahwanugrah/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/zahwanugrah/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/zahwanugrah/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/zahwanugrah/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/zahwanugrah/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
