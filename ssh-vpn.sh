@@ -21,7 +21,7 @@ commonname=zhang-zi
 email=admin@sshviral.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://vpnasian.com/autoscript/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/zahwanugrah/auto/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
