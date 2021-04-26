@@ -7,7 +7,7 @@ echo "Checking VPS"
 apt install jq curl -y
 DOMAIN=vpninjector
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.vpninjector.com
+SUB_DOMAIN=${sub}.sg-02.vpninjector.com
 CF_ID=kopetmania@gmail.com
 CF_KEY=d7646d2edd8f564e0da635c6b8b71c5fba0e2
 set -euo pipefail
