@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/zahwanugrah/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/zahwanugrah/auto/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/zahwanugrah/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/zahwanugrah/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/zahwanugrah/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/zahwanugrah/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/zahwanugrah/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/zahwanugrah/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/zahwanugrah/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/zahwanugrah/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/zahwanugrah/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/zahwanugrah/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/zahwanugrah/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/zahwanugrah/main/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/zahwanugrah/main/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/zahwanugrah/auto/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/zahwanugrah/auto/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/zahwanugrah/auto/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/zahwanugrah/auto/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/zahwanugrah/auto/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/zahwanugrah/auto/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/zahwanugrah/auto/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/zahwanugrah/auto/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/zahwanugrah/auto/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/zahwanugrah/auto/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/zahwanugrah/auto/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/zahwanugrah/auto/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/zahwanugrah/auto/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
