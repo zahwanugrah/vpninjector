@@ -88,10 +88,10 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss "https://raw.githubusercontent.com/zahwanugrah/main/add-ss.sh"
-wget -O del-ss "https://raw.githubusercontent.com/zahwanugrah/main/del-ss.sh"
-wget -O cek-ss "https://raw.githubusercontent.com/zahwanugrah/main/cek-ss.sh"
-wget -O renew-ss "https://raw.githubusercontent.com/zahwanugrah/main/renew-ss.sh"
+wget -O add-ss "https://raw.githubusercontent.com/zahwanugrah/auto/main/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/zahwanugrah/auto/main/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/zahwanugrah/auto/main/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/zahwanugrah/auto/main/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
