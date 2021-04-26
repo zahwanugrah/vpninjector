@@ -1,7 +1,4 @@
 #!/bin/bash
-# By KopeT-19
-#
-# ==================================================
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
