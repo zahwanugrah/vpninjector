@@ -1,5 +1,5 @@
 #!/bin/bash
-# By Horasss
+# By KopeT-19
 #
 # ==================================================
 
@@ -15,10 +15,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.vpnasian.com
+organization=www.sshviral.com
 organizationalunit=pr_aiman
 commonname=zhang-zi
-email=admin@vpnasian.com
+email=admin@sshviral.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://vpnasian.com/autoscript/password"
