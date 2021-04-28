@@ -12,7 +12,7 @@
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='JohnFordTV-Premium Script'
+MyScriptName='LAPET-MANIA'
 
 # OpenSSH Ports
 SSH_Port1='22'
