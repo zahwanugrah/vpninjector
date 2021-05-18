@@ -19,8 +19,8 @@ mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/zahwanugrah/auto/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/zahwanugrah/AutoScriptSSH/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/zahwanugrah/auto/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+#wget https://raw.githubusercontent.com/zahwanugrah/AutoScriptSSH/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+#wget https://raw.githubusercontent.com/zahwanugrah/auto/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
 wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://raw.githubusercontent.com/zahwanugrah/auto/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
@@ -29,8 +29,8 @@ wget https://raw.githubusercontent.com/zahwanugrah/auto/main/wg.sh && chmod +x w
 #install v2ray
 wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://raw.githubusercontent.com/zahwanugrah/auto/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+#wget https://raw.githubusercontent.com/zahwanugrah/auto/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
  
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
