@@ -7,7 +7,7 @@ echo "Checking VPS"
 clear
 echo start
 sleep 0.5
-source /var/lib/premium-script/ipvps.conf
+#source /var/lib/premium-script/ipvps.conf
 domain=$IP
 systemctl stop v2ray
 systemctl stop v2ray@none
