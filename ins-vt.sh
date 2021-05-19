@@ -41,7 +41,7 @@ cat> /etc/v2ray/config.json << END
         "clients": [
           {
             "id": "${uuid}",
-            "alterId": 2
+            "alterId": 64
 #tls
           }
         ]
