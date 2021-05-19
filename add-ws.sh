@@ -6,7 +6,7 @@ MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
 clear
 #source /var/lib/premium-script/ipvps.conf
-#if [[ "$IP" = "" ]]; then
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
