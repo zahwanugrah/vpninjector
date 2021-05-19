@@ -6,7 +6,7 @@ MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
 clear
 uuid=$(cat /etc/trojan/uuid.txt)
-source /var/lib/premium-script/ipvps.conf
+#source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
