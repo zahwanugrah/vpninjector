@@ -9,12 +9,12 @@ IP=$(wget -qO- icanhazip.com);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
-tls=2443
+tls=1440
 else
 tls="$((lastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-http=3443
+http=880
 else
 http="$((lastport2+1))"
 fi
@@ -42,7 +42,7 @@ cat > /etc/shadowsocks-libev/$user-tls.json<<END
     "method":"aes-256-cfb",
     "fast_open":true,
     "no_delay":true,
-    "nameserver":"8.8.8.8",
+    "nameserver":"1.1.1.1",
     "mode":"tcp_and_udp",
     "plugin":"obfs-server",
     "plugin_opts":"obfs=tls"
@@ -57,7 +57,7 @@ cat > /etc/shadowsocks-libev/$user-http.json <<-END
     "method":"aes-256-cfb",
     "fast_open":true,
     "no_delay":true,
-    "nameserver":"8.8.8.8",
+    "nameserver":"1.1.1.1",
     "mode":"tcp_and_udp",
     "plugin":"obfs-server",
     "plugin_opts":"obfs=http"
