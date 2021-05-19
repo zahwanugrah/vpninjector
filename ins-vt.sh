@@ -58,7 +58,7 @@ cat> /etc/v2ray/config.json << END
           ]
         },
         "wsSettings": {
-          "path": "/zhangzi",
+          "path": "/vpnijector",
           "headers": {
             "Host": ""
           }
@@ -146,7 +146,7 @@ cat> /etc/v2ray/none.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/zhangzi",
+          "path": "/vpninjector",
           "headers": {
             "Host": ""
           }
@@ -243,7 +243,7 @@ cat> /etc/v2ray/vless.json << END
           ]
         },
         "wsSettings": {
-          "path": "/zhangzi",
+          "path": "/vpninjector",
           "headers": {
             "Host": ""
           }
@@ -330,7 +330,7 @@ cat> /etc/v2ray/vnone.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/zhangzi",
+          "path": "/vpninjector",
           "headers": {
             "Host": ""
           }
