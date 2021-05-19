@@ -14,9 +14,18 @@ MYIP=$(wget -qO- icanhazip.com);
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
+IZIN=$( curl https://raw.githubusercontent.com/zahwanugrah/auto/main/ipvps.conf | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"
+echo "Telegram t.me/kopet69"
+rm -f setup.sh
+exit 0
 fi
-#mkdir /var/lib/premium-script;
-#echo "IP=" >> /var/lib/premium-script/ipvps.conf
+mkdir /var/lib/premium-script;
+echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/zahwanugrah/auto/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 #wget https://raw.githubusercontent.com/zahwanugrah/AutoScriptSSH/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
