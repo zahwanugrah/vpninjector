@@ -20,7 +20,7 @@ echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
-echo "Telegram t.me/kopet69"
+echo "Telegram t.me/bosok69"
 rm -f setup.sh
 exit 0
 fi
