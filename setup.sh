@@ -96,7 +96,7 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : Horas Marolop Amsal Siregar"  | tee -a log-install.txt
-echo "   - Telegram                : T.me/khotaisi"  | tee -a log-install.txt
+echo "   - Telegram                : T.me/bosok69"  | tee -a log-install.txt
 echo "   - Whatsapp                : 601122334455"  | tee -a log-install.txt
 echo "------------------Script Mod By Zhang-Zi-----------------" | tee -a log-install.txt
 echo ""
