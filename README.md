@@ -1,4 +1,4 @@
-#AUTOSCRIPT PERTALITE#
+#AUTOSCRIPT PERTALITE GRATIS BOSKU#
 
 apt update && apt upgrade -y && update-grub && sleep 2 && reboot
 
