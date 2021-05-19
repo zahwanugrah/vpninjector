@@ -35,7 +35,7 @@ cat> /etc/v2ray/config.json << END
   },
   "inbounds": [
     {
-      "port": 8443,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -220,7 +220,7 @@ cat> /etc/v2ray/vless.json << END
   },
   "inbounds": [
     {
-      "port": 2443,
+      "port": 8443,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -316,7 +316,7 @@ cat> /etc/v2ray/vnone.json << END
   },
   "inbounds": [
     {
-      "port": 86,
+      "port": 89,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -401,7 +401,7 @@ cat <<EOF > /etc/trojan/config.json
     "local_addr": "0.0.0.0",
     "local_port": 2087,
     "remote_addr": "127.0.0.1",
-    "remote_port": 2603,
+    "remote_port": 445,
     "password": [
         "$uuid"
     ],
