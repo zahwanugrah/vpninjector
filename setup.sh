@@ -32,8 +32,8 @@ wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ins-vt.sh && chmod 
 #wget https://raw.githubusercontent.com/zahwanugrah/auto/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 #wget https://raw.githubusercontent.com/zahwanugrah/auto/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
  
-rm -f /root/ssh-vpn.sh
-rm -f /root/sstp.sh
+#rm -f /root/ssh-vpn.sh
+#rm -f /root/sstp.sh
 rm -f /root/wg.sh
 rm -f /root/ss.sh
 rm -f /root/ssr.sh
