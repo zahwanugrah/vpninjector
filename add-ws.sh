@@ -37,7 +37,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "add": "${domain}",
       "port": "${tls}",
       "id": "${uuid}",
-      "aid": "64",
+      "aid": "32",
       "net": "ws",
       "path": "/vpninjector",
       "type": "none",
@@ -52,7 +52,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "add": "${domain}",
       "port": "${none}",
       "id": "${uuid}",
-      "aid": "64",
+      "aid": "32",
       "net": "ws",
       "path": "/vpninjector",
       "type": "none",
@@ -75,7 +75,7 @@ echo -e "Domain         : ${domain}"
 echo -e "port TLS       : ${tls}"
 echo -e "port none TLS  : ${none}"
 echo -e "id             : ${uuid}"
-echo -e "alterId        : 64"
+echo -e "alterId        : 32"
 echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /vpninjector"
