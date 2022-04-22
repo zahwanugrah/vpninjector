@@ -152,7 +152,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 440
 connect = 127.0.0.1:77
 
 END
